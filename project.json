@@ -1,0 +1,29 @@
+{
+  "overview": "SalesForge CRM is a complete, production-quality Sales CRM frontend application with 13 fully-featured modules including pipeline management, lead tracking, customer profiles, team performance, communications, analytics, and more — built with a premium enterprise SaaS design.",
+  "features": [
+    "Premium dashboard with KPI cards and 6 analytics charts",
+    "Leads management with table, kanban, and card views",
+    "Drag-and-drop sales pipeline with 7 stages",
+    "Customer profiles with activity history and payment records",
+    "Sales team leaderboard with performance metrics",
+    "Task management with list, kanban, calendar, and agenda views",
+    "Calendar with meeting scheduler and recurring events",
+    "Unified communication center for emails, calls, and messages",
+    "Reports module with 7 report types and interactive charts",
+    "Settings with 9 tabs including roles, billing, and integrations",
+    "Notification center with unread badges",
+    "Authentication pages with 2FA and OTP verification",
+    "Dark/light mode with glassmorphism design"
+  ],
+  "category": "business-productivity",
+  "tags": [
+    "crm",
+    "sales",
+    "dashboard",
+    "enterprise",
+    "analytics",
+    "leads",
+    "pipeline"
+  ],
+  "last_updated": "2026-04-22T04:15:48.073Z"
+}

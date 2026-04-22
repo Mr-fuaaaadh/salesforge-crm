@@ -1,0 +1,154 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-display: "Space Grotesk", sans-serif;
+    --font-body: "Satoshi", sans-serif;
+    --font-mono: "JetBrains Mono", monospace;
+    --radius: 1.5rem;
+
+    --background: 0.98 0.005 0;
+    --foreground: 0.12 0.01 0;
+    --card: 0.99 0 0;
+    --card-foreground: 0.12 0.01 0;
+    --popover: 0.99 0 0;
+    --popover-foreground: 0.12 0.01 0;
+
+    --primary: 0.5 0.12 243;
+    --primary-foreground: 0.98 0 0;
+
+    --secondary: 0.95 0.005 0;
+    --secondary-foreground: 0.25 0.01 0;
+    --muted: 0.92 0.002 0;
+    --muted-foreground: 0.45 0.005 0;
+
+    --accent: 0.52 0.13 270;
+    --accent-foreground: 0.98 0 0;
+
+    --destructive: 0.55 0.22 25;
+    --destructive-foreground: 0.98 0 0;
+
+    --success: 0.72 0.17 152;
+    --success-foreground: 0.98 0 0;
+
+    --warning: 0.72 0.15 84;
+    --warning-foreground: 0.12 0.01 0;
+
+    --border: 0.9 0.005 0;
+    --input: 0.93 0.003 0;
+    --ring: 0.5 0.12 243;
+
+    --chart-1: 0.72 0.17 152;
+    --chart-2: 0.5 0.12 243;
+    --chart-3: 0.52 0.13 270;
+    --chart-4: 0.72 0.15 84;
+    --chart-5: 0.55 0.22 25;
+
+    --sidebar: 0.98 0 0;
+    --sidebar-foreground: 0.12 0.01 0;
+    --sidebar-primary: 0.5 0.12 243;
+    --sidebar-primary-foreground: 0.98 0 0;
+    --sidebar-accent: 0.92 0.002 0;
+    --sidebar-accent-foreground: 0.25 0.01 0;
+    --sidebar-border: 0.9 0.005 0;
+    --sidebar-ring: 0.5 0.12 243;
+  }
+
+  .dark {
+    --background: 0.11 0.005 0;
+    --foreground: 0.95 0.005 0;
+    --card: 0.15 0.003 0;
+    --card-foreground: 0.95 0.005 0;
+    --popover: 0.18 0.002 0;
+    --popover-foreground: 0.95 0.005 0;
+
+    --primary: 0.65 0.14 243;
+    --primary-foreground: 0.11 0.005 0;
+
+    --secondary: 0.18 0.002 0;
+    --secondary-foreground: 0.85 0.005 0;
+    --muted: 0.18 0.002 0;
+    --muted-foreground: 0.55 0.003 0;
+
+    --accent: 0.68 0.15 270;
+    --accent-foreground: 0.11 0.005 0;
+
+    --destructive: 0.65 0.19 22;
+    --destructive-foreground: 0.11 0.005 0;
+
+    --success: 0.62 0.18 152;
+    --success-foreground: 0.11 0.005 0;
+
+    --warning: 0.65 0.18 84;
+    --warning-foreground: 0.11 0.005 0;
+
+    --border: 0.22 0.003 0;
+    --input: 0.2 0.002 0;
+    --ring: 0.65 0.14 243;
+
+    --chart-1: 0.62 0.18 152;
+    --chart-2: 0.65 0.14 243;
+    --chart-3: 0.68 0.15 270;
+    --chart-4: 0.65 0.18 84;
+    --chart-5: 0.65 0.19 22;
+
+    --sidebar: 0.15 0.003 0;
+    --sidebar-foreground: 0.95 0.005 0;
+    --sidebar-primary: 0.65 0.14 243;
+    --sidebar-primary-foreground: 0.11 0.005 0;
+    --sidebar-accent: 0.18 0.002 0;
+    --sidebar-accent-foreground: 0.85 0.005 0;
+    --sidebar-border: 0.22 0.003 0;
+    --sidebar-ring: 0.65 0.14 243;
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+}
+
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("/assets/fonts/SpaceGrotesk.woff2") format("woff2");
+  font-weight: 400 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("/assets/fonts/Satoshi.woff2") format("woff2");
+  font-weight: 400 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/assets/fonts/JetBrainsMono.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@layer utilities {
+  .transition-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .glass {
+    background: color-mix(in oklch, oklch(var(--background)) 80%, transparent);
+    backdrop-filter: blur(8px);
+    border: 1px solid color-mix(in oklch, oklch(var(--border)) 20%, transparent);
+  }
+
+  .shadow-elevation {
+    @apply shadow-md;
+  }
+
+  .shadow-subtle {
+    @apply shadow-sm;
+  }
+}
